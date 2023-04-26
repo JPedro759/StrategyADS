@@ -9,9 +9,9 @@ public class HelloWorld
         Discipline discipline = new(calculation);
         discipline.P1 = 10;
         discipline.P2 = 5;
-		discipline.CalculateAverage();
+	discipline.CalculateAverage();
         
-		Console.WriteLine($"{discipline.Average} - {discipline.Situation}");
+	Console.WriteLine($"P1: {discipline.P1:F2}; P2: {discipline.P2:F2}; Média: {discipline.Average}; Situação: {discipline.Situation}");
     }
 }
 
