@@ -1,9 +1,7 @@
 using System;
 
-public class HelloWorld
-{
-    public static void Main(string[] args)
-    {
+public class HelloWorld {
+    public static void Main(string[] args) {
         Arithmetic calculation = new(); 
         
         Discipline discipline = new(calculation);
@@ -11,7 +9,7 @@ public class HelloWorld
         discipline.P2 = 5;
 	discipline.CalculateAverage();
         
-	Console.WriteLine($"P1: {discipline.P1:F2}; P2: {discipline.P2:F2}; Média: {discipline.Average}; Situação: {discipline.Situation}");
+	Console.WriteLine($"P1: {discipline.P1:F2}; P2: {discipline.P2:F2}; Média: {discipline.Average:F2}; Situação: {discipline.Situation}");
     }
 }
 
@@ -60,7 +58,7 @@ class Discipline {
 	Situation = _calcAverage.situation(Average);
     }
     
-    public Discipline(ICalcAverage average){
+    public Discipline(ICalcAverage average) {
         _calcAverage = average;
     }
 }
