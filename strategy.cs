@@ -55,10 +55,10 @@ class Discipline {
     public double P2 { get => _p2; set => _p2 = value; }
     public string Situation { get => _situation; set => _situation = value; }
 	
-	public void CalculateAverage() {
-		Average = _calcAverage.calcAverage(P1, P2);
-		Situation = _calcAverage.situation(Average);
-	}
+    public void CalculateAverage() {
+	Average = _calcAverage.calcAverage(P1, P2);
+	Situation = _calcAverage.situation(Average);
+    }
     
     public Discipline(ICalcAverage average){
         _calcAverage = average;
