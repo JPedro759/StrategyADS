@@ -37,60 +37,61 @@ class Geometric implements ICalcAverage {
 }
 
 class Discipline {
-    private ICalcAverage _calcAverage;
-    private String _name;
-    private double _p1;
-    private double _p2;
-    private double _average;
-    private String _situation;
+    private ICalcAverage calcAverage;
+    private String name;
+    private double p1;
+    private double p2;
+    private double average;
+    private String situation;
     
     public ICalcAverage getCalcAverage() {
-        return _calcAverage;
+        return calcAverage;
     }
     public void setCalcAverage(ICalcAverage calcAverage) {
-        this._calcAverage = calcAverage;
+        this.calcAverage = calcAverage;
     }
     
     public double getAverage() {
-        return _average;
+        return average;
     }
     public void setAverage(double average) {
-        this._average = average;
+        this.average = average;
     }
     
     public String getName() {
-        return _name;
+        return name;
     }
     public void setName(String name) {
-        this._name = name;
+        this.name = name;
     }
     
     public double getP1() {
-        return _p1;
+        return p1;
     }
     public void setP1(double p1) {
-        this._p1 = p1;
+        this.p1 = p1;
     }
     
     public double getP2() {
-        return _p2;
+        return p2;
     }
     public void setP2(double p2) {
-        this._p2 = p2;
+        this.p2 = p2;
     }
     
     public String getSituation() {
-        return _situation;
+        return situation;
     }
     public void setSituation(String situation) {
-        this._situation = situation;
+        this.situation = situation;
     }
 	
     public void calculateAverage() {
-        _average = _calcAverage.calcAverage(_p1, _p2);
-        _situation = _calcAverage.situation(_average);
+        average = calcAverage.calcAverage(p1, p2);
+        situation = calcAverage.situation(average);
     }
+	
     public Discipline(ICalcAverage averageCalculator) {
-        _calcAverage = averageCalculator;
+        calcAverage = averageCalculator;
     }
 }
